@@ -1,0 +1,210 @@
+<!DOCTYPE html>
+<html lang="zh-CN">
+  <head>
+    <meta charset="utf-8">
+    <meta name="viewport" content="width=device-width,initial-scale=1">
+    <title>小程序-搜索历史(仿淘宝) | William Wu&#39;s Blog</title>
+    <meta name="generator" content="VuePress 1.5.2">
+    <link rel="icon" href="/vuepress-blog/img/favicon.ico">
+    <meta name="description" content="William Wu的博客">
+    <link rel="preload" href="/vuepress-blog/assets/css/0.styles.37fe6c2b.css" as="style"><link rel="preload" href="/vuepress-blog/assets/js/app.6e00fe84.js" as="script"><link rel="preload" href="/vuepress-blog/assets/js/7.2d53fe4f.js" as="script"><link rel="preload" href="/vuepress-blog/assets/js/29.1be7397c.js" as="script"><link rel="prefetch" href="/vuepress-blog/assets/js/1.f7ee9676.js"><link rel="prefetch" href="/vuepress-blog/assets/js/10.b4107c20.js"><link rel="prefetch" href="/vuepress-blog/assets/js/100.3e28addf.js"><link rel="prefetch" href="/vuepress-blog/assets/js/101.78435e54.js"><link rel="prefetch" href="/vuepress-blog/assets/js/102.4ee27135.js"><link rel="prefetch" href="/vuepress-blog/assets/js/103.859a6a44.js"><link rel="prefetch" href="/vuepress-blog/assets/js/104.6b1a5b52.js"><link rel="prefetch" href="/vuepress-blog/assets/js/105.f600bf77.js"><link rel="prefetch" href="/vuepress-blog/assets/js/106.425c2372.js"><link rel="prefetch" href="/vuepress-blog/assets/js/107.ee0cb1e7.js"><link rel="prefetch" href="/vuepress-blog/assets/js/108.b2e6bffc.js"><link rel="prefetch" href="/vuepress-blog/assets/js/109.97ce0ea4.js"><link rel="prefetch" href="/vuepress-blog/assets/js/11.94b39620.js"><link rel="prefetch" href="/vuepress-blog/assets/js/110.d65b4011.js"><link rel="prefetch" href="/vuepress-blog/assets/js/111.28dfa48c.js"><link rel="prefetch" href="/vuepress-blog/assets/js/112.6d74b466.js"><link rel="prefetch" href="/vuepress-blog/assets/js/113.0ca4f5d9.js"><link rel="prefetch" href="/vuepress-blog/assets/js/114.a9a1fe16.js"><link rel="prefetch" href="/vuepress-blog/assets/js/115.1fd807d9.js"><link rel="prefetch" href="/vuepress-blog/assets/js/116.70a3ae35.js"><link rel="prefetch" href="/vuepress-blog/assets/js/117.276332b6.js"><link rel="prefetch" href="/vuepress-blog/assets/js/118.d3bf4413.js"><link rel="prefetch" href="/vuepress-blog/assets/js/119.21b2b555.js"><link rel="prefetch" href="/vuepress-blog/assets/js/12.403f835f.js"><link rel="prefetch" href="/vuepress-blog/assets/js/120.9ac96a53.js"><link rel="prefetch" href="/vuepress-blog/assets/js/121.ee19205b.js"><link rel="prefetch" href="/vuepress-blog/assets/js/122.ac5a4182.js"><link rel="prefetch" href="/vuepress-blog/assets/js/123.f74bd9d9.js"><link rel="prefetch" href="/vuepress-blog/assets/js/124.f0aae912.js"><link rel="prefetch" href="/vuepress-blog/assets/js/125.75f6477a.js"><link rel="prefetch" href="/vuepress-blog/assets/js/126.b3de6604.js"><link rel="prefetch" href="/vuepress-blog/assets/js/127.4de40117.js"><link rel="prefetch" href="/vuepress-blog/assets/js/128.69d929a3.js"><link rel="prefetch" href="/vuepress-blog/assets/js/13.dea19516.js"><link rel="prefetch" href="/vuepress-blog/assets/js/14.d5c1a527.js"><link rel="prefetch" href="/vuepress-blog/assets/js/15.b2ecaf4b.js"><link rel="prefetch" href="/vuepress-blog/assets/js/16.db40c74c.js"><link rel="prefetch" href="/vuepress-blog/assets/js/17.8b81caf4.js"><link rel="prefetch" href="/vuepress-blog/assets/js/18.bdbab762.js"><link rel="prefetch" href="/vuepress-blog/assets/js/19.c0cf46cf.js"><link rel="prefetch" href="/vuepress-blog/assets/js/20.cb8775d1.js"><link rel="prefetch" href="/vuepress-blog/assets/js/21.40219664.js"><link rel="prefetch" href="/vuepress-blog/assets/js/22.d64c780c.js"><link rel="prefetch" href="/vuepress-blog/assets/js/23.42e15140.js"><link rel="prefetch" href="/vuepress-blog/assets/js/24.432b3fbc.js"><link rel="prefetch" href="/vuepress-blog/assets/js/25.8c44fec8.js"><link rel="prefetch" href="/vuepress-blog/assets/js/26.e6051055.js"><link rel="prefetch" href="/vuepress-blog/assets/js/27.fb53f0fb.js"><link rel="prefetch" href="/vuepress-blog/assets/js/28.60bca441.js"><link rel="prefetch" href="/vuepress-blog/assets/js/3.136ff634.js"><link rel="prefetch" href="/vuepress-blog/assets/js/30.505ce938.js"><link rel="prefetch" href="/vuepress-blog/assets/js/31.1b1fce7f.js"><link rel="prefetch" href="/vuepress-blog/assets/js/32.21548a49.js"><link rel="prefetch" href="/vuepress-blog/assets/js/33.b51b407a.js"><link rel="prefetch" href="/vuepress-blog/assets/js/34.355f9cce.js"><link rel="prefetch" href="/vuepress-blog/assets/js/35.9ce5fd83.js"><link rel="prefetch" href="/vuepress-blog/assets/js/36.5431a5fa.js"><link rel="prefetch" href="/vuepress-blog/assets/js/37.5e0bb2c2.js"><link rel="prefetch" href="/vuepress-blog/assets/js/38.ac393103.js"><link rel="prefetch" href="/vuepress-blog/assets/js/39.4b2a2262.js"><link rel="prefetch" href="/vuepress-blog/assets/js/4.5e7582dc.js"><link rel="prefetch" href="/vuepress-blog/assets/js/40.9280b51b.js"><link rel="prefetch" href="/vuepress-blog/assets/js/41.002b6dd7.js"><link rel="prefetch" href="/vuepress-blog/assets/js/42.1b8e6662.js"><link rel="prefetch" href="/vuepress-blog/assets/js/43.1e8d6b7c.js"><link rel="prefetch" href="/vuepress-blog/assets/js/44.d0b84c72.js"><link rel="prefetch" href="/vuepress-blog/assets/js/45.4ee86323.js"><link rel="prefetch" href="/vuepress-blog/assets/js/46.2cf04455.js"><link rel="prefetch" href="/vuepress-blog/assets/js/47.0ddfc35c.js"><link rel="prefetch" href="/vuepress-blog/assets/js/48.86befbe9.js"><link rel="prefetch" href="/vuepress-blog/assets/js/49.db6b99b1.js"><link rel="prefetch" href="/vuepress-blog/assets/js/5.4b916ac4.js"><link rel="prefetch" href="/vuepress-blog/assets/js/50.8cddd757.js"><link rel="prefetch" href="/vuepress-blog/assets/js/51.d86e11f5.js"><link rel="prefetch" href="/vuepress-blog/assets/js/52.c734683b.js"><link rel="prefetch" href="/vuepress-blog/assets/js/53.60838c39.js"><link rel="prefetch" href="/vuepress-blog/assets/js/54.2a4ad983.js"><link rel="prefetch" href="/vuepress-blog/assets/js/55.247690ca.js"><link rel="prefetch" href="/vuepress-blog/assets/js/56.418dadb4.js"><link rel="prefetch" href="/vuepress-blog/assets/js/57.3c28d478.js"><link rel="prefetch" href="/vuepress-blog/assets/js/58.f8d0967a.js"><link rel="prefetch" href="/vuepress-blog/assets/js/59.53ce0108.js"><link rel="prefetch" href="/vuepress-blog/assets/js/6.355a8f07.js"><link rel="prefetch" href="/vuepress-blog/assets/js/60.d4b4abe1.js"><link rel="prefetch" href="/vuepress-blog/assets/js/61.e809079c.js"><link rel="prefetch" href="/vuepress-blog/assets/js/62.8c16fbcc.js"><link rel="prefetch" href="/vuepress-blog/assets/js/63.3e21188d.js"><link rel="prefetch" href="/vuepress-blog/assets/js/64.adc4acbb.js"><link rel="prefetch" href="/vuepress-blog/assets/js/65.785f539f.js"><link rel="prefetch" href="/vuepress-blog/assets/js/66.be79db4e.js"><link rel="prefetch" href="/vuepress-blog/assets/js/67.27ee8a98.js"><link rel="prefetch" href="/vuepress-blog/assets/js/68.ce63c55f.js"><link rel="prefetch" href="/vuepress-blog/assets/js/69.c888fef8.js"><link rel="prefetch" href="/vuepress-blog/assets/js/70.f520be35.js"><link rel="prefetch" href="/vuepress-blog/assets/js/71.0e036b39.js"><link rel="prefetch" href="/vuepress-blog/assets/js/72.2a79d934.js"><link rel="prefetch" href="/vuepress-blog/assets/js/73.8820a069.js"><link rel="prefetch" href="/vuepress-blog/assets/js/74.e6a8ccd3.js"><link rel="prefetch" href="/vuepress-blog/assets/js/75.4a779789.js"><link rel="prefetch" href="/vuepress-blog/assets/js/76.31afc92e.js"><link rel="prefetch" href="/vuepress-blog/assets/js/77.22ff2bfa.js"><link rel="prefetch" href="/vuepress-blog/assets/js/78.bd33db03.js"><link rel="prefetch" href="/vuepress-blog/assets/js/79.0997de77.js"><link rel="prefetch" href="/vuepress-blog/assets/js/8.4f46ad19.js"><link rel="prefetch" href="/vuepress-blog/assets/js/80.13b28fd9.js"><link rel="prefetch" href="/vuepress-blog/assets/js/81.3667cbaa.js"><link rel="prefetch" href="/vuepress-blog/assets/js/82.97bc529f.js"><link rel="prefetch" href="/vuepress-blog/assets/js/83.e97dcb9e.js"><link rel="prefetch" href="/vuepress-blog/assets/js/84.a31d5202.js"><link rel="prefetch" href="/vuepress-blog/assets/js/85.c67a5ac3.js"><link rel="prefetch" href="/vuepress-blog/assets/js/86.54f888da.js"><link rel="prefetch" href="/vuepress-blog/assets/js/87.4a369fc5.js"><link rel="prefetch" href="/vuepress-blog/assets/js/88.40dfee79.js"><link rel="prefetch" href="/vuepress-blog/assets/js/89.cd99730f.js"><link rel="prefetch" href="/vuepress-blog/assets/js/9.fae5a856.js"><link rel="prefetch" href="/vuepress-blog/assets/js/90.96d9a0f4.js"><link rel="prefetch" href="/vuepress-blog/assets/js/91.d4118fd2.js"><link rel="prefetch" href="/vuepress-blog/assets/js/92.515544a5.js"><link rel="prefetch" href="/vuepress-blog/assets/js/93.0e928d02.js"><link rel="prefetch" href="/vuepress-blog/assets/js/94.295d68fa.js"><link rel="prefetch" href="/vuepress-blog/assets/js/95.f7e8be92.js"><link rel="prefetch" href="/vuepress-blog/assets/js/96.558f477b.js"><link rel="prefetch" href="/vuepress-blog/assets/js/97.47dee1d2.js"><link rel="prefetch" href="/vuepress-blog/assets/js/98.5b9f2ec3.js"><link rel="prefetch" href="/vuepress-blog/assets/js/99.1968cfa2.js">
+    <link rel="stylesheet" href="/vuepress-blog/assets/css/0.styles.37fe6c2b.css">
+  </head>
+  <body>
+    <div id="app" data-server-rendered="true"><div id="vuepress-theme-meteorlxy"><header class="header" data-v-7a046aea><div data-v-e4145d0a data-v-7a046aea><nav class="navbar" data-v-e4145d0a><div class="container" data-v-e4145d0a><a href="/vuepress-blog/" class="router-link-active" data-v-e4145d0a><span class="navbar-site-name" data-v-e4145d0a>
+          William Wu's Blog
+        </span></a> <div class="navbar-toggler" data-v-e4145d0a><svg class="icon" style="font-size:1.2em;" data-v-e4145d0a data-v-e4145d0a><title data-v-e4145d0a data-v-e4145d0a>menu</title><use xlink:href="#icon-menu" data-v-e4145d0a data-v-e4145d0a></use></svg></div> <div class="navbar-links" data-v-e4145d0a><a href="/vuepress-blog/" class="navbar-link" data-v-e4145d0a>
+            首页
+          </a><a href="/vuepress-blog/posts/" class="navbar-link router-link-active" data-v-e4145d0a>
+            文章
+          </a><a href="/vuepress-blog/about/" class="navbar-link" data-v-e4145d0a>
+            关于
+          </a></div></div></nav> <div class="navbar-holder" style="display:none;" data-v-e4145d0a></div></div> <div class="banner" data-v-98d6aa8c data-v-7a046aea data-v-7a046aea><div class="container" data-v-98d6aa8c><div class="center" data-v-98d6aa8c><h1 data-v-98d6aa8c data-v-7a046aea>
+          小程序-搜索历史(仿淘宝)
+        </h1></div></div></div></header> <div class="container clearfix show-aside" data-v-4dd605a1 data-v-4dd605a1><main class="main" data-v-4dd605a1><div class="post" data-v-4dd605a1 data-v-4dd605a1><section class="post-meta main-div" data-v-4e23451f><section class="post-date clearfix" data-v-4e23451f><span class="create-date" data-v-4e23451f>
+      发布时间 : 2021-08-16
+    </span> <!----></section> <section class="post-links" data-v-4e23451f><a href="/vuepress-blog/posts/2021/07/30/_01.html" class="post-link" data-v-4e23451f>
+      上一篇 : 小程序页面返回传值四种解决方案总结
+    </a> <a href="/vuepress-blog/posts/2021/08/25/_01.html" class="post-link" data-v-4e23451f>
+      下一篇 : 解决vue-cli项目中使用typescript引用公共js报错问题
+    </a></section></section> <article class="main-div"><div class="post-content content content__default"><blockquote><p>本文转载自：<a href="https://www.jianshu.com/p/a68cb160d9c9" target="_blank" rel="noopener noreferrer">小程序-搜索历史(仿淘宝)<svg xmlns="http://www.w3.org/2000/svg" aria-hidden="true" x="0px" y="0px" viewBox="0 0 100 100" width="15" height="15" class="icon outbound"><path fill="currentColor" d="M18.8,85.1h56l0,0c2.2,0,4-1.8,4-4v-32h-8v28h-48v-48h28v-8h-32l0,0c-2.2,0-4,1.8-4,4v56C14.8,83.3,16.6,85.1,18.8,85.1z"></path> <polygon fill="currentColor" points="45.7,48.7 51.3,54.3 77.2,28.5 77.2,37.2 85.2,37.2 85.2,14.9 62.8,14.9 62.8,22.9 71.5,22.9"></polygon></svg></a></p></blockquote> <p></p><div class="table-of-contents"><ul><li><a href="#page-js">Page.js</a></li><li><a href="#page-wxml">Page.wxml</a></li><li><a href="#page-wxss">Page.wxss</a></li><li><a href="#效果图">效果图</a></li></ul></div><p></p> <h2 id="page-js"><a href="#page-js" class="header-anchor">#</a> Page.js</h2> <div class="language-json extra-class"><pre class="language-json"><code>data<span class="token operator">:</span> <span class="token punctuation">{</span>
+    keywordsList<span class="token operator">:</span> <span class="token punctuation">[</span><span class="token punctuation">]</span><span class="token punctuation">,</span>
+    unfoldBtnFlag<span class="token operator">:</span> <span class="token boolean">false</span><span class="token punctuation">,</span> <span class="token comment">// 搜索历史中展开按钮开关</span>
+    isunfoldList<span class="token operator">:</span> <span class="token boolean">false</span> <span class="token comment">// 展开全部历史搜索</span>
+  <span class="token punctuation">}</span><span class="token punctuation">,</span>
+onShow() <span class="token punctuation">{</span>
+    const _this = this;
+    <span class="token comment">// 获取缓存中的搜索历史</span>
+    wx.getStorage(<span class="token punctuation">{</span>
+      key<span class="token operator">:</span> 'keywordsList'<span class="token punctuation">,</span>
+      success(res) <span class="token punctuation">{</span>
+        _this.setData(<span class="token punctuation">{</span> keywordsList<span class="token operator">:</span> res.data <span class="token punctuation">}</span>)
+      <span class="token punctuation">}</span>
+    <span class="token punctuation">}</span>)
+    setTimeout(() =&gt; <span class="token punctuation">{</span>
+      <span class="token comment">// 获取keywordsList遍历后子元素节点在页面上的宽高</span>
+      const query = wx.createSelectorQuery().in(this)
+      query.selectAll('.searchList-item').fields(<span class="token punctuation">{</span>
+        size<span class="token operator">:</span> <span class="token boolean">true</span><span class="token punctuation">,</span>
+      <span class="token punctuation">}</span><span class="token punctuation">,</span> function (res) <span class="token punctuation">{</span>
+        _this.computedItemSize(res)
+      <span class="token punctuation">}</span>).exec()
+    <span class="token punctuation">}</span><span class="token punctuation">,</span> <span class="token number">500</span>)
+<span class="token punctuation">}</span><span class="token punctuation">,</span>
+<span class="token comment">// 搜索历史子元素个数计算</span>
+  async computedItemSize(res) <span class="token punctuation">{</span>
+    const keywordsList = this.data.keywordsList;
+    if (keywordsList.length == <span class="token number">0</span>) return;
+    const listWidth = wx.getSystemInfoSync().windowWidth - <span class="token number">20</span>; <span class="token comment">// 20 为左右pardding</span>
+    const listItemMarginRight = <span class="token number">10</span>;
+    const itemObj = <span class="token punctuation">{</span><span class="token punctuation">}</span>; <span class="token comment">// { arrLength : arr }</span>
+    let itemArr = <span class="token punctuation">[</span><span class="token punctuation">]</span>; <span class="token comment">// 每行子元素集合</span>
+    let count = <span class="token number">0</span>; <span class="token comment">// 当前长度</span>
+    for(let i=<span class="token number">0</span>; i&lt;res.length; i++) <span class="token punctuation">{</span>
+      const listItemWidth = res<span class="token punctuation">[</span>i<span class="token punctuation">]</span>.width + listItemMarginRight;
+      let num = count + listItemWidth;
+      if (num &lt; listWidth) <span class="token punctuation">{</span>
+        itemArr.push(keywordsList<span class="token punctuation">[</span>i<span class="token punctuation">]</span>)
+        count += res<span class="token punctuation">[</span>i<span class="token punctuation">]</span>.width + listItemMarginRight
+      <span class="token punctuation">}</span> else <span class="token punctuation">{</span>
+        if (itemArr.length ==<span class="token number">0</span> &amp;&amp; count == <span class="token number">0</span>) <span class="token punctuation">{</span> <span class="token comment">// 此条件满足，说明子元素长度超出</span>
+          itemObj<span class="token punctuation">[</span>Object.keys(itemObj).length<span class="token punctuation">]</span> = <span class="token punctuation">[</span>keywordsList<span class="token punctuation">[</span>i<span class="token punctuation">]</span><span class="token punctuation">]</span>
+        <span class="token punctuation">}</span> else <span class="token punctuation">{</span>
+          itemObj<span class="token punctuation">[</span>Object.keys(itemObj).length<span class="token punctuation">]</span> = itemArr
+          count = <span class="token number">0</span>
+          itemArr = <span class="token punctuation">[</span><span class="token punctuation">]</span>
+          i-- <span class="token comment">// 当前元素宽度+总长度超出，重置集合后，重新遍历</span>
+        <span class="token punctuation">}</span>
+      <span class="token punctuation">}</span>
+    <span class="token punctuation">}</span>
+    if (itemArr.length &gt; <span class="token number">0</span>) <span class="token punctuation">{</span> itemObj<span class="token punctuation">[</span>Object.keys(itemObj).length<span class="token punctuation">]</span> = itemArr <span class="token punctuation">}</span>
+    let newKeywordsList = <span class="token punctuation">[</span><span class="token punctuation">]</span> <span class="token comment">// 最终结果</span>
+    const itemObjKeyArr = Object.values(itemObj);
+    let maxWidthIndex = <span class="token number">0</span>; <span class="token comment">// 第二行的到最大宽度子元素的索引</span>
+    if (itemObjKeyArr.length &gt; <span class="token number">2</span>) <span class="token punctuation">{</span> <span class="token comment">// 超过2行</span>
+      this.setData(<span class="token punctuation">{</span>unfoldBtnFlag<span class="token operator">:</span> <span class="token boolean">true</span><span class="token punctuation">}</span>) <span class="token comment">// 行数大于2显示展开按钮</span>
+      if(itemObjKeyArr<span class="token punctuation">[</span><span class="token number">1</span><span class="token punctuation">]</span>.length &gt; <span class="token number">1</span>) <span class="token punctuation">{</span> <span class="token comment">// 若第二行的子元素有多个，否则表示子元素长度超出，css处理即可</span>
+        const listSecWidth = listWidth - <span class="token number">26</span> <span class="token comment">// 26为展开按钮的宽度</span>
+        let maxWidth = <span class="token number">0</span>;
+        itemObj<span class="token punctuation">[</span><span class="token number">1</span><span class="token punctuation">]</span>.forEach((item<span class="token punctuation">,</span> index) =&gt; <span class="token punctuation">{</span>
+          maxWidth += res<span class="token punctuation">[</span>itemObjKeyArr<span class="token punctuation">[</span><span class="token number">0</span><span class="token punctuation">]</span>.length + index<span class="token punctuation">]</span>.width + listItemMarginRight
+          if (maxWidth &lt; listSecWidth) <span class="token punctuation">{</span> maxWidthIndex = index <span class="token punctuation">}</span>
+        <span class="token punctuation">}</span>);
+        itemObj<span class="token punctuation">[</span><span class="token number">1</span><span class="token punctuation">]</span> = itemObj<span class="token punctuation">[</span><span class="token number">1</span><span class="token punctuation">]</span>.slice(<span class="token number">0</span> <span class="token punctuation">,</span> maxWidthIndex + <span class="token number">1</span>) <span class="token comment">// 截取最大宽度内的子元素集合</span>
+      <span class="token punctuation">}</span>
+      newKeywordsList = <span class="token punctuation">[</span>...itemObj<span class="token punctuation">[</span><span class="token number">0</span><span class="token punctuation">]</span><span class="token punctuation">,</span> ...itemObj<span class="token punctuation">[</span><span class="token number">1</span><span class="token punctuation">]</span><span class="token punctuation">]</span>
+    <span class="token punctuation">}</span> else <span class="token punctuation">{</span>
+      itemObjKeyArr.forEach(item =&gt; newKeywordsList = <span class="token punctuation">[</span>...newKeywordsList<span class="token punctuation">,</span> ...item<span class="token punctuation">]</span>)
+    <span class="token punctuation">}</span>
+    this.setData(<span class="token punctuation">{</span>keywordsList<span class="token operator">:</span> newKeywordsList<span class="token punctuation">}</span>) <span class="token comment">// 替换搜索历史数据</span>
+  <span class="token punctuation">}</span><span class="token punctuation">,</span>
+<span class="token comment">// 展开搜索历史记录</span>
+  unfoldList() <span class="token punctuation">{</span>
+    const _this = this;
+    wx.getStorage(<span class="token punctuation">{</span>
+      key<span class="token operator">:</span> 'keywordsList'<span class="token punctuation">,</span>
+      success(res) <span class="token punctuation">{</span>
+        _this.setData(<span class="token punctuation">{</span> 
+          keywordsList<span class="token operator">:</span> res.data<span class="token punctuation">,</span>
+          isunfoldList<span class="token operator">:</span> <span class="token boolean">true</span><span class="token punctuation">,</span>
+          unfoldBtnFlag<span class="token operator">:</span> <span class="token boolean">false</span>
+        <span class="token punctuation">}</span>)
+      <span class="token punctuation">}</span>
+    <span class="token punctuation">}</span>)
+  <span class="token punctuation">}</span><span class="token punctuation">,</span>
+  <span class="token comment">// 删除全部搜索历史记录</span>
+  clearKeywordsList() <span class="token punctuation">{</span>
+    const _this = this;
+    wx.showModal(<span class="token punctuation">{</span>
+      content<span class="token operator">:</span> '是否删除全部历史搜索?'<span class="token punctuation">,</span>
+      cancelText<span class="token operator">:</span> <span class="token string">&quot;取消&quot;</span><span class="token punctuation">,</span>
+      confirmText<span class="token operator">:</span> <span class="token string">&quot;删除&quot;</span><span class="token punctuation">,</span>
+      confirmColor<span class="token operator">:</span> '#<span class="token number">4</span>C<span class="token number">88</span>FF'<span class="token punctuation">,</span>
+      success(res) <span class="token punctuation">{</span>
+        wx.removeStorageSync('keywordsList') <span class="token comment">// 清除缓存中的记录</span>
+        _this.setData(<span class="token punctuation">{</span>
+          keywordsList<span class="token operator">:</span> <span class="token punctuation">[</span><span class="token punctuation">]</span><span class="token punctuation">,</span>
+          unfoldBtnFlag<span class="token operator">:</span> <span class="token boolean">false</span>
+        <span class="token punctuation">}</span>)
+        wx.showToast(<span class="token punctuation">{</span>
+          title<span class="token operator">:</span> '删除成功'<span class="token punctuation">,</span>
+          icon<span class="token operator">:</span> 'success'
+        <span class="token punctuation">}</span>)
+      <span class="token punctuation">}</span>
+    <span class="token punctuation">}</span>)
+  <span class="token punctuation">}</span>
+</code></pre></div><h2 id="page-wxml"><a href="#page-wxml" class="header-anchor">#</a> Page.wxml</h2> <div class="language-html extra-class"><pre class="language-html"><code><span class="token tag"><span class="token tag"><span class="token punctuation">&lt;</span>view</span> <span class="token attr-name"><span class="token namespace">wx:</span>if</span><span class="token attr-value"><span class="token punctuation">=</span><span class="token punctuation">&quot;</span>{{ keywordsList.length &gt; 0 }}<span class="token punctuation">&quot;</span></span> <span class="token attr-name">class</span><span class="token attr-value"><span class="token punctuation">=</span><span class="token punctuation">&quot;</span>searchList<span class="token punctuation">&quot;</span></span><span class="token punctuation">&gt;</span></span>
+  <span class="token tag"><span class="token tag"><span class="token punctuation">&lt;</span>view</span> <span class="token attr-name">class</span><span class="token attr-value"><span class="token punctuation">=</span><span class="token punctuation">&quot;</span>searchList-title<span class="token punctuation">&quot;</span></span><span class="token punctuation">&gt;</span></span>
+    <span class="token tag"><span class="token tag"><span class="token punctuation">&lt;</span>text</span> <span class="token attr-name">class</span><span class="token attr-value"><span class="token punctuation">=</span><span class="token punctuation">&quot;</span>searchList-text<span class="token punctuation">&quot;</span></span><span class="token punctuation">&gt;</span></span>搜索历史<span class="token tag"><span class="token tag"><span class="token punctuation">&lt;/</span>text</span><span class="token punctuation">&gt;</span></span>
+    <span class="token tag"><span class="token tag"><span class="token punctuation">&lt;</span>text</span> <span class="token attr-name">class</span><span class="token attr-value"><span class="token punctuation">=</span><span class="token punctuation">&quot;</span>iconfont icon-close<span class="token punctuation">&quot;</span></span> <span class="token attr-name"><span class="token namespace">bind:</span>tap</span><span class="token attr-value"><span class="token punctuation">=</span><span class="token punctuation">&quot;</span>clearKeywordsList<span class="token punctuation">&quot;</span></span><span class="token punctuation">&gt;</span></span><span class="token tag"><span class="token tag"><span class="token punctuation">&lt;/</span>text</span><span class="token punctuation">&gt;</span></span>
+  <span class="token tag"><span class="token tag"><span class="token punctuation">&lt;/</span>view</span><span class="token punctuation">&gt;</span></span>
+  <span class="token tag"><span class="token tag"><span class="token punctuation">&lt;</span>view</span> <span class="token attr-name">class</span><span class="token attr-value"><span class="token punctuation">=</span><span class="token punctuation">&quot;</span>searchList-content {{ unfoldBtnFlag &amp;&amp; !isunfoldList ? 'searchList-content-unfold' : ''}}<span class="token punctuation">&quot;</span></span><span class="token punctuation">&gt;</span></span>
+    <span class="token tag"><span class="token tag"><span class="token punctuation">&lt;</span>block</span> <span class="token attr-name"><span class="token namespace">wx:</span>for</span><span class="token attr-value"><span class="token punctuation">=</span><span class="token punctuation">&quot;</span>{{ keywordsList }}<span class="token punctuation">&quot;</span></span> <span class="token attr-name"><span class="token namespace">wx:</span>key</span><span class="token attr-value"><span class="token punctuation">=</span><span class="token punctuation">&quot;</span>{{ index }}<span class="token punctuation">&quot;</span></span><span class="token punctuation">&gt;</span></span>
+      <span class="token tag"><span class="token tag"><span class="token punctuation">&lt;</span>view</span> <span class="token attr-name">class</span><span class="token attr-value"><span class="token punctuation">=</span><span class="token punctuation">&quot;</span>searchList-item<span class="token punctuation">&quot;</span></span> <span class="token attr-name"><span class="token namespace">bind:</span>tap</span><span class="token attr-value"><span class="token punctuation">=</span><span class="token punctuation">&quot;</span>getValue<span class="token punctuation">&quot;</span></span> <span class="token attr-name">data-value</span><span class="token attr-value"><span class="token punctuation">=</span><span class="token punctuation">&quot;</span>{{ item }}<span class="token punctuation">&quot;</span></span><span class="token punctuation">&gt;</span></span>{{ item }}<span class="token tag"><span class="token tag"><span class="token punctuation">&lt;/</span>view</span><span class="token punctuation">&gt;</span></span>
+    <span class="token tag"><span class="token tag"><span class="token punctuation">&lt;/</span>block</span><span class="token punctuation">&gt;</span></span>
+    <span class="token tag"><span class="token tag"><span class="token punctuation">&lt;</span>text</span> <span class="token attr-name"><span class="token namespace">wx:</span>if</span><span class="token attr-value"><span class="token punctuation">=</span><span class="token punctuation">&quot;</span>{{unfoldBtnFlag}}<span class="token punctuation">&quot;</span></span> <span class="token attr-name">class</span><span class="token attr-value"><span class="token punctuation">=</span><span class="token punctuation">&quot;</span>searchList-icon iconfont icon-top<span class="token punctuation">&quot;</span></span> <span class="token attr-name"><span class="token namespace">bind:</span>tap</span><span class="token attr-value"><span class="token punctuation">=</span><span class="token punctuation">&quot;</span>unfoldList<span class="token punctuation">&quot;</span></span><span class="token punctuation">&gt;</span></span><span class="token tag"><span class="token tag"><span class="token punctuation">&lt;/</span>text</span><span class="token punctuation">&gt;</span></span>
+  <span class="token tag"><span class="token tag"><span class="token punctuation">&lt;/</span>view</span><span class="token punctuation">&gt;</span></span>
+<span class="token tag"><span class="token tag"><span class="token punctuation">&lt;/</span>view</span><span class="token punctuation">&gt;</span></span>
+</code></pre></div><h2 id="page-wxss"><a href="#page-wxss" class="header-anchor">#</a> Page.wxss</h2> <div class="language-css extra-class"><pre class="language-css"><code><span class="token selector">.searchList</span> <span class="token punctuation">{</span>
+    <span class="token property">padding</span><span class="token punctuation">:</span> 10px<span class="token punctuation">;</span>
+    <span class="token property">background-color</span><span class="token punctuation">:</span> #fff<span class="token punctuation">;</span>
+    <span class="token property">margin-top</span><span class="token punctuation">:</span> 108rpx<span class="token punctuation">;</span>
+<span class="token punctuation">}</span>
+<span class="token selector">.searchList-title</span> <span class="token punctuation">{</span>
+    <span class="token property">display</span><span class="token punctuation">:</span> flex<span class="token punctuation">;</span>
+    <span class="token property">justify-content</span><span class="token punctuation">:</span> space-between<span class="token punctuation">;</span>
+   <span class="token property">align-items</span><span class="token punctuation">:</span> center<span class="token punctuation">;</span>
+    <span class="token property">font-size</span><span class="token punctuation">:</span> 16px<span class="token punctuation">;</span>
+    <span class="token property">font-weight</span><span class="token punctuation">:</span> bold<span class="token punctuation">;</span>
+    <span class="token property">margin-bottom</span><span class="token punctuation">:</span> 20rpx<span class="token punctuation">;</span>
+<span class="token punctuation">}</span>
+<span class="token selector">.searchList-item</span>  <span class="token punctuation">{</span>
+    <span class="token property">box-sizing</span><span class="token punctuation">:</span> border-box<span class="token punctuation">;</span>
+    <span class="token property">max-width</span><span class="token punctuation">:</span> 100%<span class="token punctuation">;</span>
+    <span class="token property">font-size</span><span class="token punctuation">:</span> 12px<span class="token punctuation">;</span>
+    <span class="token property">padding</span><span class="token punctuation">:</span> 10rpx 20rpx<span class="token punctuation">;</span>
+    <span class="token property">color</span><span class="token punctuation">:</span> #ccc<span class="token punctuation">;</span>
+    <span class="token property">background-color</span><span class="token punctuation">:</span> #f8f8f8<span class="token punctuation">;</span>
+    <span class="token property">border-radius</span><span class="token punctuation">:</span> 25px<span class="token punctuation">;</span>
+    <span class="token property">margin-right</span><span class="token punctuation">:</span> 10px<span class="token punctuation">;</span>
+    <span class="token property">margin-bottom</span><span class="token punctuation">:</span> 10px<span class="token punctuation">;</span>
+    <span class="token property">white-space</span><span class="token punctuation">:</span> nowrap<span class="token punctuation">;</span>
+    <span class="token property">text-overflow</span><span class="token punctuation">:</span> ellipsis<span class="token punctuation">;</span>
+    <span class="token property">overflow</span><span class="token punctuation">:</span> hidden<span class="token punctuation">;</span>
+<span class="token punctuation">}</span>
+<span class="token selector">.searchList-content-unfold view:nth-last-of-type(1)</span> <span class="token punctuation">{</span>
+  <span class="token property">max-width</span><span class="token punctuation">:</span> <span class="token function">calc</span><span class="token punctuation">(</span>100% - 36px<span class="token punctuation">)</span><span class="token punctuation">;</span> // 26为展开按钮宽度 10为margin-right
+<span class="token punctuation">}</span>
+<span class="token selector">.searchList-icon</span> <span class="token punctuation">{</span>
+  <span class="token property">width</span><span class="token punctuation">:</span> 26px<span class="token punctuation">;</span>
+  <span class="token property">height</span><span class="token punctuation">:</span> 26px<span class="token punctuation">;</span>
+  <span class="token property">line-height</span><span class="token punctuation">:</span> 24px<span class="token punctuation">;</span>
+  <span class="token property">text-align</span><span class="token punctuation">:</span> center<span class="token punctuation">;</span>
+  <span class="token property">color</span><span class="token punctuation">:</span> #ccc<span class="token punctuation">;</span>
+  <span class="token property">background-color</span><span class="token punctuation">:</span> #f8f8f8<span class="token punctuation">;</span>
+  <span class="token property">border-radius</span><span class="token punctuation">:</span> 50%<span class="token punctuation">;</span>
+<span class="token punctuation">}</span>
+<span class="token selector">.icon-close</span> <span class="token punctuation">{</span>
+  <span class="token property">font-size</span><span class="token punctuation">:</span> 14px<span class="token punctuation">;</span>
+  <span class="token property">font-weight</span><span class="token punctuation">:</span> normal<span class="token punctuation">;</span>
+<span class="token punctuation">}</span>
+</code></pre></div><h2 id="效果图"><a href="#效果图" class="header-anchor">#</a> 效果图</h2> <p><img alt="0" data-src="/vuepress-blog/img/post/2021-08-16-01/%E5%B0%8F%E4%BA%8E2%E8%A1%8C,%E4%B8%80%E8%A1%8C%E8%B6%85%E5%87%BA.webp" loading="lazy" class="lazy"></p> <p><img alt="1" data-src="/vuepress-blog/img/post/2021-08-16-01/%E5%B0%8F%E4%BA%8E2%E8%A1%8C,%E6%AF%8F%E8%A1%8C%E8%B6%85%E5%87%BA.webp" loading="lazy" class="lazy"></p> <p><img alt="2" data-src="/vuepress-blog/img/post/2021-08-16-01/%E5%A4%A7%E4%BA%8E2%E8%A1%8C,%E7%AC%AC1%E8%A1%8C%E8%B6%85%E5%87%BA.webp" loading="lazy" class="lazy"></p> <p><img alt="3" data-src="/vuepress-blog/img/post/2021-08-16-01/%E5%A4%A7%E4%BA%8E2%E8%A1%8C,%E7%AC%AC2%E8%A1%8C%E8%B6%85%E5%87%BA.webp" loading="lazy" class="lazy"></p> <p><img alt="4" data-src="/vuepress-blog/img/post/2021-08-16-01/%E5%A4%9A%E8%A1%8C%E5%B1%95%E5%BC%80.webp" loading="lazy" class="lazy"></p></div></article> <section class="post-meta main-div" data-v-4e23451f><section class="post-date clearfix" data-v-4e23451f><span class="create-date" data-v-4e23451f>
+      发布时间 : 2021-08-16
+    </span> <!----></section> <section class="post-links" data-v-4e23451f><a href="/vuepress-blog/posts/2021/07/30/_01.html" class="post-link" data-v-4e23451f>
+      上一篇 : 小程序页面返回传值四种解决方案总结
+    </a> <a href="/vuepress-blog/posts/2021/08/25/_01.html" class="post-link" data-v-4e23451f>
+      下一篇 : 解决vue-cli项目中使用typescript引用公共js报错问题
+    </a></section></section> <!----></div></main> <aside class="aside" data-v-4dd605a1><div class="info-card main-div" data-v-9d847660 data-v-4dd605a1><div class="info-card-header" data-v-9d847660><img src="/vuepress-blog/img/avatar.jpg" alt="William Wu" class="info-avatar" data-v-9d847660></div> <div class="info-card-body" data-v-9d847660><section class="info-nickname" data-v-9d847660>
+      William Wu
+    </section> <section class="info-desc" data-v-9d847660>Nothing is true,everything is permitted.(万物皆虚,万事皆允。)</section> <section class="info-contact" data-v-9d847660><section data-v-9d847660><span title="Guangzhou City, China" data-v-9d847660 data-v-9d847660><svg class="icon" style="font-size:1em;" data-v-9d847660 data-v-9d847660><title data-v-9d847660 data-v-9d847660>Guangzhou City, China</title><use xlink:href="#icon-location" data-v-9d847660 data-v-9d847660></use></svg><span class="info-text" data-v-9d847660 data-v-9d847660>
+          Guangzhou City, China
+        </span></span></section> <!----> <section data-v-9d847660><a href="mailto:williamwutianyu@qq.com" title="williamwutianyu@qq.com" data-v-9d847660 data-v-9d847660><svg class="icon" style="font-size:1em;" data-v-9d847660 data-v-9d847660><title data-v-9d847660 data-v-9d847660>williamwutianyu@qq.com</title><use xlink:href="#icon-email" data-v-9d847660 data-v-9d847660></use></svg><span class="info-text" data-v-9d847660 data-v-9d847660>
+          williamwutianyu@qq.com
+        </span></a></section></section></div> <div class="info-card-footer" data-v-9d847660><section class="info-sns clearfix" data-v-9d847660><a href="https://github.com/william-wu97" target="_blank" class="sns-link" data-v-9d847660><span title="GitHub: william-wu97" class="sns-icon" data-v-9d847660 data-v-9d847660><svg class="icon" style="font-size:1.5em;" data-v-9d847660 data-v-9d847660><title data-v-9d847660 data-v-9d847660>GitHub: william-wu97</title><use xlink:href="#icon-github" data-v-9d847660 data-v-9d847660></use></svg></span></a></section></div></div> <div class="post-nav-card main-div" style="position:relative;top:0;width:0px;" data-v-4dd605a1><div class="post-nav-contents"><svg class="icon"><title>book</title><use xlink:href="#icon-book"></use></svg> <span>文章目录</span> <div class="post-nav-toc"><ul><li><a href="/vuepress-blog/posts/2021/08/16/_01.html#page-js">Page.js</a></li><li><a href="/vuepress-blog/posts/2021/08/16/_01.html#page-wxml">Page.wxml</a></li><li><a href="/vuepress-blog/posts/2021/08/16/_01.html#page-wxss">Page.wxss</a></li><li><a href="/vuepress-blog/posts/2021/08/16/_01.html#效果图">效果图</a></li></ul></div></div> <!----></div></aside></div> <footer class="footer" data-v-1375e54c><p class="footer-sns-links" data-v-1375e54c><a href="https://github.com/william-wu97" target="_blank" class="sns-link" data-v-1375e54c><span title="GitHub: william-wu97" class="sns-icon" data-v-1375e54c data-v-1375e54c><svg class="icon" style="font-size:25px;" data-v-1375e54c data-v-1375e54c><title data-v-1375e54c data-v-1375e54c>GitHub: william-wu97</title><use xlink:href="#icon-github" data-v-1375e54c data-v-1375e54c></use></svg></span></a></p> <p class="footer-text" data-v-1375e54c><span data-v-1375e54c>Powered by </span> <a href="https://github.com/vuejs/vuepress" target="_blank" data-v-1375e54c>
+      VuePress
+    </a> <span data-v-1375e54c> | </span> <a href="https://github.com/meteorlxy/vuepress-theme-meteorlxy" target="_blank" data-v-1375e54c>
+        meteorlxy
+      </a></p> <!----></footer></div><div class="global-ui"><!----><!----><div class="cat-container" data-v-a13867c0><canvas id="vuepress-cat" width="280" height="250" class="live2d" data-v-a13867c0></canvas></div><div class="reading-progress top" data-v-21b39eda><div class="progress" data-v-21b39eda></div></div></div></div>
+    <script src="/vuepress-blog/assets/js/app.6e00fe84.js" defer></script><script src="/vuepress-blog/assets/js/7.2d53fe4f.js" defer></script><script src="/vuepress-blog/assets/js/29.1be7397c.js" defer></script>
+  </body>
+</html>

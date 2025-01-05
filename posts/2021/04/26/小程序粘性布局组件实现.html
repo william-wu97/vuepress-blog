@@ -1,0 +1,344 @@
+<!DOCTYPE html>
+<html lang="zh-CN">
+  <head>
+    <meta charset="utf-8">
+    <meta name="viewport" content="width=device-width,initial-scale=1">
+    <title>小程序粘性布局组件实现 | William Wu&#39;s Blog</title>
+    <meta name="generator" content="VuePress 1.5.2">
+    <link rel="icon" href="/vuepress-blog/img/favicon.ico">
+    <meta name="description" content="William Wu的博客">
+    <link rel="preload" href="/vuepress-blog/assets/css/0.styles.37fe6c2b.css" as="style"><link rel="preload" href="/vuepress-blog/assets/js/app.6e00fe84.js" as="script"><link rel="preload" href="/vuepress-blog/assets/js/7.2d53fe4f.js" as="script"><link rel="preload" href="/vuepress-blog/assets/js/125.75f6477a.js" as="script"><link rel="prefetch" href="/vuepress-blog/assets/js/1.f7ee9676.js"><link rel="prefetch" href="/vuepress-blog/assets/js/10.b4107c20.js"><link rel="prefetch" href="/vuepress-blog/assets/js/100.3e28addf.js"><link rel="prefetch" href="/vuepress-blog/assets/js/101.78435e54.js"><link rel="prefetch" href="/vuepress-blog/assets/js/102.4ee27135.js"><link rel="prefetch" href="/vuepress-blog/assets/js/103.859a6a44.js"><link rel="prefetch" href="/vuepress-blog/assets/js/104.6b1a5b52.js"><link rel="prefetch" href="/vuepress-blog/assets/js/105.f600bf77.js"><link rel="prefetch" href="/vuepress-blog/assets/js/106.425c2372.js"><link rel="prefetch" href="/vuepress-blog/assets/js/107.ee0cb1e7.js"><link rel="prefetch" href="/vuepress-blog/assets/js/108.b2e6bffc.js"><link rel="prefetch" href="/vuepress-blog/assets/js/109.97ce0ea4.js"><link rel="prefetch" href="/vuepress-blog/assets/js/11.94b39620.js"><link rel="prefetch" href="/vuepress-blog/assets/js/110.d65b4011.js"><link rel="prefetch" href="/vuepress-blog/assets/js/111.28dfa48c.js"><link rel="prefetch" href="/vuepress-blog/assets/js/112.6d74b466.js"><link rel="prefetch" href="/vuepress-blog/assets/js/113.0ca4f5d9.js"><link rel="prefetch" href="/vuepress-blog/assets/js/114.a9a1fe16.js"><link rel="prefetch" href="/vuepress-blog/assets/js/115.1fd807d9.js"><link rel="prefetch" href="/vuepress-blog/assets/js/116.70a3ae35.js"><link rel="prefetch" href="/vuepress-blog/assets/js/117.276332b6.js"><link rel="prefetch" href="/vuepress-blog/assets/js/118.d3bf4413.js"><link rel="prefetch" href="/vuepress-blog/assets/js/119.21b2b555.js"><link rel="prefetch" href="/vuepress-blog/assets/js/12.403f835f.js"><link rel="prefetch" href="/vuepress-blog/assets/js/120.9ac96a53.js"><link rel="prefetch" href="/vuepress-blog/assets/js/121.ee19205b.js"><link rel="prefetch" href="/vuepress-blog/assets/js/122.ac5a4182.js"><link rel="prefetch" href="/vuepress-blog/assets/js/123.f74bd9d9.js"><link rel="prefetch" href="/vuepress-blog/assets/js/124.f0aae912.js"><link rel="prefetch" href="/vuepress-blog/assets/js/126.b3de6604.js"><link rel="prefetch" href="/vuepress-blog/assets/js/127.4de40117.js"><link rel="prefetch" href="/vuepress-blog/assets/js/128.69d929a3.js"><link rel="prefetch" href="/vuepress-blog/assets/js/13.dea19516.js"><link rel="prefetch" href="/vuepress-blog/assets/js/14.d5c1a527.js"><link rel="prefetch" href="/vuepress-blog/assets/js/15.b2ecaf4b.js"><link rel="prefetch" href="/vuepress-blog/assets/js/16.db40c74c.js"><link rel="prefetch" href="/vuepress-blog/assets/js/17.8b81caf4.js"><link rel="prefetch" href="/vuepress-blog/assets/js/18.bdbab762.js"><link rel="prefetch" href="/vuepress-blog/assets/js/19.c0cf46cf.js"><link rel="prefetch" href="/vuepress-blog/assets/js/20.cb8775d1.js"><link rel="prefetch" href="/vuepress-blog/assets/js/21.40219664.js"><link rel="prefetch" href="/vuepress-blog/assets/js/22.d64c780c.js"><link rel="prefetch" href="/vuepress-blog/assets/js/23.42e15140.js"><link rel="prefetch" href="/vuepress-blog/assets/js/24.432b3fbc.js"><link rel="prefetch" href="/vuepress-blog/assets/js/25.8c44fec8.js"><link rel="prefetch" href="/vuepress-blog/assets/js/26.e6051055.js"><link rel="prefetch" href="/vuepress-blog/assets/js/27.fb53f0fb.js"><link rel="prefetch" href="/vuepress-blog/assets/js/28.60bca441.js"><link rel="prefetch" href="/vuepress-blog/assets/js/29.1be7397c.js"><link rel="prefetch" href="/vuepress-blog/assets/js/3.136ff634.js"><link rel="prefetch" href="/vuepress-blog/assets/js/30.505ce938.js"><link rel="prefetch" href="/vuepress-blog/assets/js/31.1b1fce7f.js"><link rel="prefetch" href="/vuepress-blog/assets/js/32.21548a49.js"><link rel="prefetch" href="/vuepress-blog/assets/js/33.b51b407a.js"><link rel="prefetch" href="/vuepress-blog/assets/js/34.355f9cce.js"><link rel="prefetch" href="/vuepress-blog/assets/js/35.9ce5fd83.js"><link rel="prefetch" href="/vuepress-blog/assets/js/36.5431a5fa.js"><link rel="prefetch" href="/vuepress-blog/assets/js/37.5e0bb2c2.js"><link rel="prefetch" href="/vuepress-blog/assets/js/38.ac393103.js"><link rel="prefetch" href="/vuepress-blog/assets/js/39.4b2a2262.js"><link rel="prefetch" href="/vuepress-blog/assets/js/4.5e7582dc.js"><link rel="prefetch" href="/vuepress-blog/assets/js/40.9280b51b.js"><link rel="prefetch" href="/vuepress-blog/assets/js/41.002b6dd7.js"><link rel="prefetch" href="/vuepress-blog/assets/js/42.1b8e6662.js"><link rel="prefetch" href="/vuepress-blog/assets/js/43.1e8d6b7c.js"><link rel="prefetch" href="/vuepress-blog/assets/js/44.d0b84c72.js"><link rel="prefetch" href="/vuepress-blog/assets/js/45.4ee86323.js"><link rel="prefetch" href="/vuepress-blog/assets/js/46.2cf04455.js"><link rel="prefetch" href="/vuepress-blog/assets/js/47.0ddfc35c.js"><link rel="prefetch" href="/vuepress-blog/assets/js/48.86befbe9.js"><link rel="prefetch" href="/vuepress-blog/assets/js/49.db6b99b1.js"><link rel="prefetch" href="/vuepress-blog/assets/js/5.4b916ac4.js"><link rel="prefetch" href="/vuepress-blog/assets/js/50.8cddd757.js"><link rel="prefetch" href="/vuepress-blog/assets/js/51.d86e11f5.js"><link rel="prefetch" href="/vuepress-blog/assets/js/52.c734683b.js"><link rel="prefetch" href="/vuepress-blog/assets/js/53.60838c39.js"><link rel="prefetch" href="/vuepress-blog/assets/js/54.2a4ad983.js"><link rel="prefetch" href="/vuepress-blog/assets/js/55.247690ca.js"><link rel="prefetch" href="/vuepress-blog/assets/js/56.418dadb4.js"><link rel="prefetch" href="/vuepress-blog/assets/js/57.3c28d478.js"><link rel="prefetch" href="/vuepress-blog/assets/js/58.f8d0967a.js"><link rel="prefetch" href="/vuepress-blog/assets/js/59.53ce0108.js"><link rel="prefetch" href="/vuepress-blog/assets/js/6.355a8f07.js"><link rel="prefetch" href="/vuepress-blog/assets/js/60.d4b4abe1.js"><link rel="prefetch" href="/vuepress-blog/assets/js/61.e809079c.js"><link rel="prefetch" href="/vuepress-blog/assets/js/62.8c16fbcc.js"><link rel="prefetch" href="/vuepress-blog/assets/js/63.3e21188d.js"><link rel="prefetch" href="/vuepress-blog/assets/js/64.adc4acbb.js"><link rel="prefetch" href="/vuepress-blog/assets/js/65.785f539f.js"><link rel="prefetch" href="/vuepress-blog/assets/js/66.be79db4e.js"><link rel="prefetch" href="/vuepress-blog/assets/js/67.27ee8a98.js"><link rel="prefetch" href="/vuepress-blog/assets/js/68.ce63c55f.js"><link rel="prefetch" href="/vuepress-blog/assets/js/69.c888fef8.js"><link rel="prefetch" href="/vuepress-blog/assets/js/70.f520be35.js"><link rel="prefetch" href="/vuepress-blog/assets/js/71.0e036b39.js"><link rel="prefetch" href="/vuepress-blog/assets/js/72.2a79d934.js"><link rel="prefetch" href="/vuepress-blog/assets/js/73.8820a069.js"><link rel="prefetch" href="/vuepress-blog/assets/js/74.e6a8ccd3.js"><link rel="prefetch" href="/vuepress-blog/assets/js/75.4a779789.js"><link rel="prefetch" href="/vuepress-blog/assets/js/76.31afc92e.js"><link rel="prefetch" href="/vuepress-blog/assets/js/77.22ff2bfa.js"><link rel="prefetch" href="/vuepress-blog/assets/js/78.bd33db03.js"><link rel="prefetch" href="/vuepress-blog/assets/js/79.0997de77.js"><link rel="prefetch" href="/vuepress-blog/assets/js/8.4f46ad19.js"><link rel="prefetch" href="/vuepress-blog/assets/js/80.13b28fd9.js"><link rel="prefetch" href="/vuepress-blog/assets/js/81.3667cbaa.js"><link rel="prefetch" href="/vuepress-blog/assets/js/82.97bc529f.js"><link rel="prefetch" href="/vuepress-blog/assets/js/83.e97dcb9e.js"><link rel="prefetch" href="/vuepress-blog/assets/js/84.a31d5202.js"><link rel="prefetch" href="/vuepress-blog/assets/js/85.c67a5ac3.js"><link rel="prefetch" href="/vuepress-blog/assets/js/86.54f888da.js"><link rel="prefetch" href="/vuepress-blog/assets/js/87.4a369fc5.js"><link rel="prefetch" href="/vuepress-blog/assets/js/88.40dfee79.js"><link rel="prefetch" href="/vuepress-blog/assets/js/89.cd99730f.js"><link rel="prefetch" href="/vuepress-blog/assets/js/9.fae5a856.js"><link rel="prefetch" href="/vuepress-blog/assets/js/90.96d9a0f4.js"><link rel="prefetch" href="/vuepress-blog/assets/js/91.d4118fd2.js"><link rel="prefetch" href="/vuepress-blog/assets/js/92.515544a5.js"><link rel="prefetch" href="/vuepress-blog/assets/js/93.0e928d02.js"><link rel="prefetch" href="/vuepress-blog/assets/js/94.295d68fa.js"><link rel="prefetch" href="/vuepress-blog/assets/js/95.f7e8be92.js"><link rel="prefetch" href="/vuepress-blog/assets/js/96.558f477b.js"><link rel="prefetch" href="/vuepress-blog/assets/js/97.47dee1d2.js"><link rel="prefetch" href="/vuepress-blog/assets/js/98.5b9f2ec3.js"><link rel="prefetch" href="/vuepress-blog/assets/js/99.1968cfa2.js">
+    <link rel="stylesheet" href="/vuepress-blog/assets/css/0.styles.37fe6c2b.css">
+  </head>
+  <body>
+    <div id="app" data-server-rendered="true"><div id="vuepress-theme-meteorlxy"><header class="header" data-v-7a046aea><div data-v-e4145d0a data-v-7a046aea><nav class="navbar" data-v-e4145d0a><div class="container" data-v-e4145d0a><a href="/vuepress-blog/" class="router-link-active" data-v-e4145d0a><span class="navbar-site-name" data-v-e4145d0a>
+          William Wu's Blog
+        </span></a> <div class="navbar-toggler" data-v-e4145d0a><svg class="icon" style="font-size:1.2em;" data-v-e4145d0a data-v-e4145d0a><title data-v-e4145d0a data-v-e4145d0a>menu</title><use xlink:href="#icon-menu" data-v-e4145d0a data-v-e4145d0a></use></svg></div> <div class="navbar-links" data-v-e4145d0a><a href="/vuepress-blog/" class="navbar-link" data-v-e4145d0a>
+            首页
+          </a><a href="/vuepress-blog/posts/" class="navbar-link router-link-active" data-v-e4145d0a>
+            文章
+          </a><a href="/vuepress-blog/about/" class="navbar-link" data-v-e4145d0a>
+            关于
+          </a></div></div></nav> <div class="navbar-holder" style="display:none;" data-v-e4145d0a></div></div> <div class="banner" data-v-98d6aa8c data-v-7a046aea data-v-7a046aea><div class="container" data-v-98d6aa8c><div class="center" data-v-98d6aa8c><h1 data-v-98d6aa8c data-v-7a046aea>
+          小程序粘性布局组件实现
+        </h1></div></div></div></header> <div class="container clearfix show-aside" data-v-4dd605a1 data-v-4dd605a1><main class="main" data-v-4dd605a1><div class="post" data-v-4dd605a1 data-v-4dd605a1><section class="post-meta main-div" data-v-4e23451f><section class="post-date clearfix" data-v-4e23451f><span class="create-date" data-v-4e23451f>
+      发布时间 : 2021-04-26
+    </span> <!----></section> <section class="post-links" data-v-4e23451f><a href="/vuepress-blog/posts/2021/04/25/%E5%B0%8F%E7%B1%B311-ultra-%E5%81%B7%E6%B8%A112-5%E5%BC%80%E5%8F%91%E7%89%88%E4%BF%9D%E7%95%99%E6%95%B0%E6%8D%AE%E5%8D%87%E7%BA%A7%E6%95%99%E7%A8%8B.html" class="post-link" data-v-4e23451f>
+      上一篇 : 小米11 Ultra &amp; Pro 偷渡12.5开发版保留数据升级教程【需要已解BL锁】
+    </a> <a href="/vuepress-blog/posts/2021/04/26/actions%E8%87%AA%E5%8A%A8%E5%8C%96.html" class="post-link" data-v-4e23451f>
+      下一篇 : actions自动化：vuepress构建，github同步gitee，giteepage部署
+    </a></section></section> <article class="main-div"><div class="post-content content content__default"><blockquote><p>本文转载自：<a href="https://developers.weixin.qq.com/community/develop/article/doc/000624abcdc9f8896f9bbb7b556413" target="_blank" rel="noopener noreferrer">小程序粘性布局组件实现<svg xmlns="http://www.w3.org/2000/svg" aria-hidden="true" x="0px" y="0px" viewBox="0 0 100 100" width="15" height="15" class="icon outbound"><path fill="currentColor" d="M18.8,85.1h56l0,0c2.2,0,4-1.8,4-4v-32h-8v28h-48v-48h28v-8h-32l0,0c-2.2,0-4,1.8-4,4v56C14.8,83.3,16.6,85.1,18.8,85.1z"></path> <polygon fill="currentColor" points="45.7,48.7 51.3,54.3 77.2,28.5 77.2,37.2 85.2,37.2 85.2,14.9 62.8,14.9 62.8,22.9 71.5,22.9"></polygon></svg></a></p></blockquote> <p></p><div class="table-of-contents"><ul><li><a href="#一、前言">一、前言</a></li><li><a href="#二、demo演示">二、demo演示</a></li><li><a href="#三、代码演示">三、代码演示</a><ul><li><a href="#_3-1-页面代码">3.1 页面代码</a></li><li><a href="#页面js">页面js</a></li><li><a href="#_3-2-组件代码">3.2 组件代码</a></li></ul></li><li><a href="#总结">总结</a></li></ul></div><p></p> <h2 id="一、前言"><a href="#一、前言" class="header-anchor">#</a> 一、前言</h2> <p>开发中，我们经常会遇需要让组件在屏幕范围内时，按照正常布局排列，而组件滚出屏幕范围时，让其始终固定在屏幕顶部的情况，也就是常说的粘性布局。今天我们就一起用小程序来实现一个适用于不同场景下的粘性布局组件。</p> <h2 id="二、demo演示"><a href="#二、demo演示" class="header-anchor">#</a> 二、demo演示</h2> <p>如图，实现的组件主要适用于以下几种场景：</p> <ol><li>吸顶页面最上方；</li> <li>吸顶与页面有固定距离的位置；</li> <li>在指定容器内吸顶；</li> <li>嵌套在scroll-view中吸顶。
+<img alt="0" data-src="/vuepress-blog/img/post/%E5%B0%8F%E7%A8%8B%E5%BA%8F%E7%B2%98%E6%80%A7%E5%B8%83%E5%B1%80%E7%BB%84%E4%BB%B6%E5%AE%9E%E7%8E%B0/0.gif" loading="lazy" class="lazy"></li></ol> <h2 id="三、代码演示"><a href="#三、代码演示" class="header-anchor">#</a> 三、代码演示</h2> <p>其中，粘性组件通过<weimob-sticky></weimob-sticky>调用，参数信息用法如下：</p> <p>滚动时触发scroll函数，其中isFixed为是否吸顶，scrollTop为距离顶部的位置。详细代码如下。</p> <h3 id="_3-1-页面代码"><a href="#_3-1-页面代码" class="header-anchor">#</a> 3.1 页面代码</h3> <h4 id="_3-1-1-基础用法"><a href="#_3-1-1-基础用法" class="header-anchor">#</a> 3.1.1 基础用法</h4> <div class="language- extra-class"><pre class="language-text"><code>&lt;view class=&quot;weimob-block&quot;&gt;
+  &lt;view class=&quot;weimob-title&quot;&gt;基础用法&lt;/view&gt;
+  &lt;view class=&quot;weimob-body&quot;&gt;
+    &lt;weimob-sticky&gt;
+    &lt;!-- 需要粘性的部分 --&gt;
+      &lt;button class=&quot;margin-left-base&quot; size=&quot;mini&quot;&gt;
+        基础用法
+      &lt;/button&gt;
+    &lt;/weimob-sticky&gt;
+  &lt;/view&gt;
+&lt;/view&gt;
+</code></pre></div><h4 id="_3-1-2-吸顶距离"><a href="#_3-1-2-吸顶距离" class="header-anchor">#</a> 3.1.2 吸顶距离</h4> <div class="language- extra-class"><pre class="language-text"><code>&lt;view class=&quot;weimob-block&quot;&gt;
+  &lt;view class=&quot;weimob-title&quot;&gt;吸顶距离&lt;/view&gt;
+  &lt;view class=&quot;weimob-body&quot;&gt;
+  &lt;!-- 吸顶时与顶部的距离，单位px --&gt;
+    &lt;weimob-sticky offset-top=&quot;{{ 50 }}&quot;&gt;
+    &lt;!-- 需要粘性的部分 --&gt;
+      &lt;button class=&quot;margin-left-top&quot; type=&quot;primary&quot; size=&quot;mini&quot;&gt;
+        吸顶距离
+      &lt;/button&gt;
+    &lt;/weimob-sticky&gt;
+  &lt;/view&gt;
+&lt;/view&gt;
+</code></pre></div><h4 id="_3-1-3-指定容器"><a href="#_3-1-3-指定容器" class="header-anchor">#</a> 3.1.3 指定容器</h4> <div class="language- extra-class"><pre class="language-text"><code>&lt;view class=&quot;weimob-block&quot;&gt;
+  &lt;view class=&quot;weimob-title&quot;&gt;指定容器&lt;/view&gt;
+  &lt;view class=&quot;weimob-body&quot;&gt;
+  &lt;!-- 这里需要固定高度 --&gt;
+    &lt;view id=&quot;container&quot; style=&quot;height: 300rpx;background-color: #fff&quot;&gt;
+      &lt;weimob-sticky container=&quot;{{ container }}&quot;&gt;
+        &lt;button size=&quot;mini&quot; class=&quot;margin-left-special&quot;&gt;
+          指定容器
+        &lt;/button&gt;
+      &lt;/weimob-sticky&gt;
+    &lt;/view&gt;
+  &lt;/view&gt;
+&lt;/view&gt;
+</code></pre></div><h4 id="_3-1-4-嵌套在scroll-view使用"><a href="#_3-1-4-嵌套在scroll-view使用" class="header-anchor">#</a> 3.1.4 嵌套在scroll-view使用</h4> <div class="language- extra-class"><pre class="language-text"><code>&lt;view class=&quot;weimob-block&quot;&gt;
+  &lt;view class=&quot;weimob-title&quot;&gt;嵌套在 scroll-view 内使用&lt;/view&gt;
+  &lt;!-- 这里需要固定高度，scroll-view里的元素高度需要大于其高度 --&gt;
+  &lt;scroll-view
+		bind:scroll=&quot;onScroll&quot;
+		scroll-y
+		id=&quot;scroller&quot;
+		style=&quot;height: 400rpx; background-color: #fff;margin-top: 40rpx;&quot;
+	&gt;
+		&lt;view style=&quot;height: 800rpx&quot;&gt;
+			&lt;weimob-sticky
+				scroll-top=&quot;{{ scrollTop }}&quot;
+				offset-top=&quot;{{ offsetTop }}&quot;
+			&gt;
+				&lt;button size=&quot;mini&quot; class=&quot;margin-left-scoll&quot;&gt;
+					嵌套在 scroll-view 内
+				&lt;/button&gt;
+			&lt;/weimob-sticky&gt;
+		&lt;/view&gt;
+	&lt;/scroll-view&gt;
+&lt;/view&gt;
+</code></pre></div><h3 id="页面js"><a href="#页面js" class="header-anchor">#</a> 页面js</h3> <div class="language- extra-class"><pre class="language-text"><code>Page({
+  data: {
+    container: null, //一个函数，返回容器对应的 NodesRef 节点
+    scrollTop: 60, // 当前滚动区域的滚动位置，非null时会禁用页面滚动事件的监听
+    offsetTop: 0  // 吸顶时与顶部的距离，单位px
+  },
+  onReady() {
+  // 页面渲染完，获取节点信息
+    this.setData({
+      container: () =&gt; wx.createSelectorQuery().select('#container'),
+    });
+  },
+  onScroll(event) {
+   // 容器滚动时获取节点信息
+    wx.createSelectorQuery()
+      .select('#scroller')
+      .boundingClientRect((res) =&gt; {
+        this.setData({
+          scrollTop: event.detail.scrollTop,
+          offsetTop: res.top,
+        });
+      })
+      .exec();
+  }
+});
+</code></pre></div><h3 id="_3-2-组件代码"><a href="#_3-2-组件代码" class="header-anchor">#</a> 3.2 组件代码</h3> <h4 id="组件wxml"><a href="#组件wxml" class="header-anchor">#</a> 组件wxml</h4> <div class="language- extra-class"><pre class="language-text"><code>&lt;wxs src=&quot;./index.wxs&quot; module=&quot;computed&quot; /&gt;
+&lt;view
+  class=&quot;weimob-sticky&quot;
+  style=&quot;{{ computed.containerStyle({ fixed, height, zIndex }) }}&quot;
+&gt;
+  &lt;view
+    class=&quot;{{ fixed ? 'weimob-sticky-wrap--fixed' : ''}}&quot;
+    style=&quot;{{ computed.wrapStyle({ fixed, offsetTop, transform, zIndex }) }}&quot;
+  &gt;
+    &lt;slot /&gt;
+  &lt;/view&gt;
+&lt;/view&gt;
+</code></pre></div><h4 id="组件wxs"><a href="#组件wxs" class="header-anchor">#</a> 组件wxs</h4> <p>这里使用使用小程序的wxs对吸顶元素的transform,top,height,z-index元素进行实时渲染，ios设备在滚动监听时性能会优于在js 2-20倍，androd设备效率暂无差异。</p> <div class="language- extra-class"><pre class="language-text"><code>function wrapStyle(data) {
+  var style = &quot;&quot;;
+	if (data.transform) {
+		style += 'transform: translate3d(0, ' + data.transform + 'px, 0);'
+	}
+	if (data.fixed) {
+    style += 'top: ' + data.offsetTop + 'px;'
+	}
+	if (data.zIndex) {
+		style += 'z-index: ' + data.zIndex + ';'
+	}
+	return style;
+}
+function containerStyle(data) {
+  var style = &quot;&quot;;
+	if (data.fixed) {
+    style += 'height: ' + data.height + 'px;'
+	}
+	if (data.zIndex) {
+		style += 'z-index: ' + data.zIndex + ';'
+	}
+	return style;
+}
+module.exports = {
+  wrapStyle: wrapStyle,
+  containerStyle: containerStyle
+}
+</code></pre></div><h4 id="组件js"><a href="#组件js" class="header-anchor">#</a> 组件js</h4> <div class="language- extra-class"><pre class="language-text"><code>import pageScrollMixin from &quot;./page-scroll&quot;;
+const ROOT_ELEMENT = &quot;.weimob-sticky&quot;;
+Component({
+  options: {
+		multipleSlots: true
+	},
+  properties: {
+    zIndex: {
+      type: Number,
+      value: 99
+    },
+    offsetTop: {
+      type: Number,
+      value: 0,
+      observer: &quot;onScroll&quot;
+    },
+    disabled: {
+      type: Boolean,
+      observer: &quot;onScroll&quot;
+    },
+    container: {
+      type: null,
+      observer: &quot;onScroll&quot;
+    },
+    scrollTop: {
+      type: null,
+      observer(val) {
+        this.onScroll({
+          scrollTop: val
+        });
+      }
+    }
+  },
+  data: {
+    height: 0,
+    fixed: false,
+    transform: 0
+  },
+  behaviors: [pageScrollMixin(function pageScrollMixinCallback(event) {
+    // 非null时会禁用页面滚动事件的监听
+    if (this.data.scrollTop != null) {
+      return;
+    }
+    this.onScroll(event);
+  })],
+  lifetimes: {
+    attached() {
+      this.onScroll();
+    }
+  },
+  methods: {
+    onScroll({
+      scrollTop
+    } = {}) {
+      const {
+        container,
+        offsetTop,
+        disabled
+      } = this.data;
+      if (disabled) {
+        this.setDataAfterDiff({
+          fixed: false,
+          transform: 0
+        });
+        return;
+      }
+      this.scrollTop = scrollTop || this.scrollTop;
+      if (typeof container === &quot;function&quot;) {
+        // 情况一：指定容器下时，吸顶距离+吸顶元素高度&gt;容器高度+容器距顶部距离,随页面滚动；
+        // 情况二：指定容器下时，吸顶距离&gt;吸顶元素高度,元素固定；
+        // 情况三：元素初始化。
+        // this.getRect获取节点ROOT_ELEMENT相对于显示区域的top,height等信息，通过root获取
+        // this.getContainerRect获取父容器相对于显示区域的top,height等信息，通过container获取
+        Promise.all([this.getRect(ROOT_ELEMENT), this.getContainerRect()]).then( 
+        ([root, container]) =&gt; {
+          if (offsetTop + root.height &gt; container.height + container.top) {
+            this.setDataAfterDiff({
+              fixed: false,
+              transform: container.height - root.height
+            });
+          } else if (offsetTop &gt;= root.top) {
+            this.setDataAfterDiff({
+              fixed: true,
+              height: root.height,
+              transform: 0
+            });
+          } else {
+            this.setDataAfterDiff({
+              fixed: false,
+              transform: 0
+            });
+          }
+        });
+        return;
+      }else{
+        this.getRect(ROOT_ELEMENT).then(root =&gt; {
+          // 吸顶时与顶部的距离小于可视区域的top距离时，随着滚动条滚动，否则吸顶
+          if (offsetTop &gt;= root.top) {
+            this.setDataAfterDiff({
+              fixed: true,
+              height: root.height
+            });
+            this.transform = 0;
+          } else {
+            this.setDataAfterDiff({
+              fixed: false
+            });
+          }
+          return Promise.resolve();
+        });
+      }
+    },
+    setDataAfterDiff(data) {
+      // 比较数据是否与上次相同，不同则触发父组件scroll事件更新isFixed，scrollTop。
+      wx.nextTick(() =&gt; {
+        const diff = Object.keys(data).reduce((prev, key) =&gt; {
+          const prevCopy = prev;
+          if (data[key] !== this.data[key]) {
+            prevCopy[key] = data[key];
+          }
+          return prevCopy;
+        }, {});
+        this.setData(diff);
+        this.triggerEvent(&quot;scroll&quot;, {
+          scrollTop: this.scrollTop,
+          isFixed: data.fixed || this.data.fixed
+        });
+      });
+    },
+    getContainerRect() {
+      const nodesRef = this.data.container();
+      return new Promise(resolve =&gt; nodesRef.boundingClientRect(resolve).exec());
+    },
+    getRect(selector) {
+      return new Promise(resolve =&gt; {
+        wx.createSelectorQuery().in(this).select(selector).boundingClientRect(rect =&gt; {
+          resolve(rect);
+        }).exec();
+      });
+    }
+  }
+});
+</code></pre></div><h4 id="page-scroll-js"><a href="#page-scroll-js" class="header-anchor">#</a> page-scroll.js</h4> <p>滚动事件在页面进入和离开时共享的pageScrollMixin函数。</p> <div class="language- extra-class"><pre class="language-text"><code>function getCurrentPage() {
+  const pages = getCurrentPages();
+  return pages[pages.length - 1] || {};
+}
+function onPageScroll(event) {
+  const {
+    weimobPageScroller = []
+  } = getCurrentPage();
+  weimobPageScroller.forEach(scroller =&gt; {
+    if (typeof scroller === &quot;function&quot; &amp;&amp; event) {
+      // @ts-ignore
+      scroller(event);
+    }
+  });
+}
+const pageScrollMixin = scroller =&gt; Behavior({
+  attached() {
+    const page = getCurrentPage();
+    if (Array.isArray(page.weimobPageScroller)) {
+      page.weimobPageScroller.push(scroller.bind(this));
+    } else {
+      page.weimobPageScroller = typeof page.onPageScroll === &quot;function&quot; ? [page.onPageScroll.bind(page), scroller.bind(this)] : [scroller.bind(this)];
+    }
+    page.onPageScroll = onPageScroll;
+  },
+  detached() {
+    const page = getCurrentPage();
+    page.weimobPageScroller = (page.weimobPageScroller || []).filter(item =&gt; item !== scroller);
+  }
+});
+export default pageScrollMixin;
+</code></pre></div><h2 id="总结"><a href="#总结" class="header-anchor">#</a> 总结</h2> <p>最后，我将上述代码放在了代码片段中供大家使用了解，https://developers.weixin.qq.com/s/qiym3wmr7znx，希望能够帮到小伙伴们，欢迎评论区建议或指教哦~</p></div></article> <section class="post-meta main-div" data-v-4e23451f><section class="post-date clearfix" data-v-4e23451f><span class="create-date" data-v-4e23451f>
+      发布时间 : 2021-04-26
+    </span> <!----></section> <section class="post-links" data-v-4e23451f><a href="/vuepress-blog/posts/2021/04/25/%E5%B0%8F%E7%B1%B311-ultra-%E5%81%B7%E6%B8%A112-5%E5%BC%80%E5%8F%91%E7%89%88%E4%BF%9D%E7%95%99%E6%95%B0%E6%8D%AE%E5%8D%87%E7%BA%A7%E6%95%99%E7%A8%8B.html" class="post-link" data-v-4e23451f>
+      上一篇 : 小米11 Ultra &amp; Pro 偷渡12.5开发版保留数据升级教程【需要已解BL锁】
+    </a> <a href="/vuepress-blog/posts/2021/04/26/actions%E8%87%AA%E5%8A%A8%E5%8C%96.html" class="post-link" data-v-4e23451f>
+      下一篇 : actions自动化：vuepress构建，github同步gitee，giteepage部署
+    </a></section></section> <!----></div></main> <aside class="aside" data-v-4dd605a1><div class="info-card main-div" data-v-9d847660 data-v-4dd605a1><div class="info-card-header" data-v-9d847660><img src="/vuepress-blog/img/avatar.jpg" alt="William Wu" class="info-avatar" data-v-9d847660></div> <div class="info-card-body" data-v-9d847660><section class="info-nickname" data-v-9d847660>
+      William Wu
+    </section> <section class="info-desc" data-v-9d847660>Nothing is true,everything is permitted.(万物皆虚,万事皆允。)</section> <section class="info-contact" data-v-9d847660><section data-v-9d847660><span title="Guangzhou City, China" data-v-9d847660 data-v-9d847660><svg class="icon" style="font-size:1em;" data-v-9d847660 data-v-9d847660><title data-v-9d847660 data-v-9d847660>Guangzhou City, China</title><use xlink:href="#icon-location" data-v-9d847660 data-v-9d847660></use></svg><span class="info-text" data-v-9d847660 data-v-9d847660>
+          Guangzhou City, China
+        </span></span></section> <!----> <section data-v-9d847660><a href="mailto:williamwutianyu@qq.com" title="williamwutianyu@qq.com" data-v-9d847660 data-v-9d847660><svg class="icon" style="font-size:1em;" data-v-9d847660 data-v-9d847660><title data-v-9d847660 data-v-9d847660>williamwutianyu@qq.com</title><use xlink:href="#icon-email" data-v-9d847660 data-v-9d847660></use></svg><span class="info-text" data-v-9d847660 data-v-9d847660>
+          williamwutianyu@qq.com
+        </span></a></section></section></div> <div class="info-card-footer" data-v-9d847660><section class="info-sns clearfix" data-v-9d847660><a href="https://github.com/william-wu97" target="_blank" class="sns-link" data-v-9d847660><span title="GitHub: william-wu97" class="sns-icon" data-v-9d847660 data-v-9d847660><svg class="icon" style="font-size:1.5em;" data-v-9d847660 data-v-9d847660><title data-v-9d847660 data-v-9d847660>GitHub: william-wu97</title><use xlink:href="#icon-github" data-v-9d847660 data-v-9d847660></use></svg></span></a></section></div></div> <div class="post-nav-card main-div" style="position:relative;top:0;width:0px;" data-v-4dd605a1><div class="post-nav-contents"><svg class="icon"><title>book</title><use xlink:href="#icon-book"></use></svg> <span>文章目录</span> <div class="post-nav-toc"><ul><li><a href="/vuepress-blog/posts/2021/04/26/%E5%B0%8F%E7%A8%8B%E5%BA%8F%E7%B2%98%E6%80%A7%E5%B8%83%E5%B1%80%E7%BB%84%E4%BB%B6%E5%AE%9E%E7%8E%B0.html#一、前言">一、前言</a></li><li><a href="/vuepress-blog/posts/2021/04/26/%E5%B0%8F%E7%A8%8B%E5%BA%8F%E7%B2%98%E6%80%A7%E5%B8%83%E5%B1%80%E7%BB%84%E4%BB%B6%E5%AE%9E%E7%8E%B0.html#二、demo演示">二、demo演示</a></li><li><a href="/vuepress-blog/posts/2021/04/26/%E5%B0%8F%E7%A8%8B%E5%BA%8F%E7%B2%98%E6%80%A7%E5%B8%83%E5%B1%80%E7%BB%84%E4%BB%B6%E5%AE%9E%E7%8E%B0.html#三、代码演示">三、代码演示</a><ul><li><a href="/vuepress-blog/posts/2021/04/26/%E5%B0%8F%E7%A8%8B%E5%BA%8F%E7%B2%98%E6%80%A7%E5%B8%83%E5%B1%80%E7%BB%84%E4%BB%B6%E5%AE%9E%E7%8E%B0.html#_3-1-页面代码">3.1 页面代码</a></li><li><a href="/vuepress-blog/posts/2021/04/26/%E5%B0%8F%E7%A8%8B%E5%BA%8F%E7%B2%98%E6%80%A7%E5%B8%83%E5%B1%80%E7%BB%84%E4%BB%B6%E5%AE%9E%E7%8E%B0.html#页面js">页面js</a></li><li><a href="/vuepress-blog/posts/2021/04/26/%E5%B0%8F%E7%A8%8B%E5%BA%8F%E7%B2%98%E6%80%A7%E5%B8%83%E5%B1%80%E7%BB%84%E4%BB%B6%E5%AE%9E%E7%8E%B0.html#_3-2-组件代码">3.2 组件代码</a></li></ul></li><li><a href="/vuepress-blog/posts/2021/04/26/%E5%B0%8F%E7%A8%8B%E5%BA%8F%E7%B2%98%E6%80%A7%E5%B8%83%E5%B1%80%E7%BB%84%E4%BB%B6%E5%AE%9E%E7%8E%B0.html#总结">总结</a></li></ul></div></div> <!----></div></aside></div> <footer class="footer" data-v-1375e54c><p class="footer-sns-links" data-v-1375e54c><a href="https://github.com/william-wu97" target="_blank" class="sns-link" data-v-1375e54c><span title="GitHub: william-wu97" class="sns-icon" data-v-1375e54c data-v-1375e54c><svg class="icon" style="font-size:25px;" data-v-1375e54c data-v-1375e54c><title data-v-1375e54c data-v-1375e54c>GitHub: william-wu97</title><use xlink:href="#icon-github" data-v-1375e54c data-v-1375e54c></use></svg></span></a></p> <p class="footer-text" data-v-1375e54c><span data-v-1375e54c>Powered by </span> <a href="https://github.com/vuejs/vuepress" target="_blank" data-v-1375e54c>
+      VuePress
+    </a> <span data-v-1375e54c> | </span> <a href="https://github.com/meteorlxy/vuepress-theme-meteorlxy" target="_blank" data-v-1375e54c>
+        meteorlxy
+      </a></p> <!----></footer></div><div class="global-ui"><!----><!----><div class="cat-container" data-v-a13867c0><canvas id="vuepress-cat" width="280" height="250" class="live2d" data-v-a13867c0></canvas></div><div class="reading-progress top" data-v-21b39eda><div class="progress" data-v-21b39eda></div></div></div></div>
+    <script src="/vuepress-blog/assets/js/app.6e00fe84.js" defer></script><script src="/vuepress-blog/assets/js/7.2d53fe4f.js" defer></script><script src="/vuepress-blog/assets/js/125.75f6477a.js" defer></script>
+  </body>
+</html>
